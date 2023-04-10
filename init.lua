@@ -69,7 +69,40 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
-    vim.cmd([[source ~/dotfiles/vim/vimrc]])
+    -- This seems not to be needed anymore
+    -- if vim.env.TERM == 'xterm-kitty' then
+    --   vim.cmd([[autocmd UIEnter * if v:event.chan ==# 0 | call chansend(v:stderr, "\x1b[>1u") | endif]])
+    --   vim.cmd([[autocmd UILeave * if v:event.chan ==# 0 | call chansend(v:stderr, "\x1b[<1u") | endif]])
+    -- end
+
+    vim.cmd([[ source ~/dotfiles/vim/vimrc ]])
+    -- vim.cmd([[ iunmap <C-m> ]])
+    -- vim.cmd([[ inoremap <CR> <CR> ]])
+  
+    -- TODO: ugly workaroud so that 
+    vim.keymap.set("i", "<C-m>", '<CR>')
+    vim.keymap.set("i", "<CR>", '<CR>')
+
+    vim.keymap.set("n", "<C-i>", '<Right>')
+    vim.keymap.set("x", "<C-i>", '<Right>')
+    vim.keymap.set("o", "<C-i>", '<Right>')
+    vim.keymap.set("i", "<C-i>", '<Right>')
+    vim.keymap.set("i", "<Tab>", '<Tab>')
+
+    -- vim.keymap.set("i", "<C-i>", 'C-i')
+    -- vim.keymap.set("i", "<Tab>", 'Tab')
+    -- vim.keymap.set("i", "<C-m>", 'C-m')
+    -- vim.keymap.set("i", "<CR>", 'CR')
+    -- vim.keymap.set("n", "<C-i>", '<CMD>lua print([[ Ctr-i is pressed ]])<CR>')
+    -- vim.keymap.set("n", "<Tab>", '<CMD>lua print([[ Tab is pressed ]])<CR>')
+    -- vim.keymap.set("n", "<C-m>", '<CMD>lua print([[ C-m is pressed ]])<CR>')
+    -- vim.keymap.set("n", "<CR>", '<CMD>lua print([[ CR is pressed ]])<CR>')
+
+    -- local keymap = vim.api.nvim_set_keymap
+    -- CSI u mappings test
+    -- keymap("n", "<C-Enter>", '<CMD>lua print([[ Ctr-Enter is pressed ]])<CR>')
+    -- keymap("n", "<C-S-p>", '<CMD>lua print([[ Ctr-Shift-P is pressed ]])<CR>')
+
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
