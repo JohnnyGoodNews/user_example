@@ -79,7 +79,6 @@ return {
     -- vim.cmd([[ iunmap <C-m> ]])
     -- vim.cmd([[ inoremap <CR> <CR> ]])
   
-    -- TODO: ugly workaroud so that 
     vim.keymap.set("i", "<C-m>", '<CR>')
     vim.keymap.set("i", "<CR>", '<CR>')
 
