@@ -18,6 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
+  -- colorscheme = "github_dark_tritanopia",
   colorscheme = "github_dark_high_contrast",
   -- colorscheme = "astrodark",
 
