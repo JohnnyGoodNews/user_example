@@ -116,5 +116,8 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    --
+    -- NOTE: keep hightlight after moving
+    vim.on_key(nil, vim.api.nvim_get_namespaces()["auto_hlsearch"])
   end,
 }
