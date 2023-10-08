@@ -77,6 +77,8 @@ return {
     --   vim.cmd([[autocmd UILeave * if v:event.chan ==# 0 | call chansend(v:stderr, "\x1b[<1u") | endif]])
     -- end
 
+    -- vim.keymap.del("n", "y")
+
     vim.cmd([[ source ~/dotfiles/vim/vimrc ]])
     -- vim.cmd([[ iunmap <C-m> ]])
     -- vim.cmd([[ inoremap <CR> <CR> ]])

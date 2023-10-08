@@ -63,6 +63,13 @@ return {
   --   end,
   -- },
   -- By adding to the which-key config and using our helper function you can add more which-key registered bindings
+  -- { "folke/which-key.nvim", enabled = false },
+--  { 
+--    "folke/which-key.nvim",
+--    opts = function(_, opts)
+--      opts.plugins.presets.operators = false
+--    end,
+--  },
   -- {
   --   "folke/which-key.nvim",
   --   config = function(plugin, opts)
